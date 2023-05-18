@@ -14,7 +14,7 @@ namespace lab14
             int a;
             do
             {
-                Console.Write("Enter what you want to do:1 - show text in file, 2 - write in file, 3 - load from file, 0 - Exit): ");
+                Console.Write("Enter what you want to do:1 - show text in file, 2 - write in file, 3 - load from file, 4 - clear file 0 - Exit: ");
                 a = int.Parse(Console.ReadLine());
 
                 switch (a)
@@ -82,6 +82,9 @@ namespace lab14
                         {
                             Console.WriteLine("File not found.");
                         }
+                        break;
+                    case 4:
+                        File.WriteAllText(path, string.Empty);
                         break;
                 }
             } while (a != 0);
